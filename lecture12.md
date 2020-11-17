@@ -69,7 +69,7 @@ Virtual Memory
     + Divide the memory into fixed-size blocks, named **page frame**, and divide the program into fixed size blocks, named **page**(将内存分为一个个叫做**页框**的固定长度的块，然后将程序分为可以放进块的叫做**页**的部分)
     + Load the pages into page frames(把页加载到页框里去)
 2. Logical address: address in instruction(逻辑地址:指令中的地址)
-3. Physical address: address in memory(物理底子:内存中的地址)
+3. Physical address: address in memory(物理地址:内存中的地址)
 4. 程序叫做页，放程序的地点叫做页框
     + 页放在哪里由OS决定，在我们的程序中写的是逻辑地址，由操作系统的决定物理地址。
     + 页放进去并不是连续的放入，记录页存在的位置
