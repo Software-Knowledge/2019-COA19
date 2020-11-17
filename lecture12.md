@@ -5,16 +5,16 @@ Virtual Memory
 - [1. 内存管理](#1-内存管理)
 - [2. 加载更多程序的解决方案](#2-加载更多程序的解决方案)
 - [3. 分区(Partitioning)](#3-分区partitioning)
-    - [3.1. Fixed-size partition(确定的分区策略)](#31-fixed-size-partition确定的分区策略)
-    - [3.2. Variable-length partition(可变长的分区策略)](#32-variable-length-partition可变长的分区策略)
+  - [3.1. Fixed-size partition(确定的分区策略)](#31-fixed-size-partition确定的分区策略)
+  - [3.2. Variable-length partition(可变长的分区策略)](#32-variable-length-partition可变长的分区策略)
 - [4. 分页(Paging)](#4-分页paging)
 - [5. Virtual Memory(虚拟内存)](#5-virtual-memory虚拟内存)
-    - [5.1. 虚拟内存示例](#51-虚拟内存示例)
-    - [5.2. 虚拟内存问题](#52-虚拟内存问题)
-        - [5.2.1. Page based Virtual Memory(基于分页的虚拟内存)](#521-page-based-virtual-memory基于分页的虚拟内存)
-        - [5.2.2. Translation Lookaside Buffer(快表，TLB)](#522-translation-lookaside-buffer快表tlb)
-        - [5.2.3. Segment based Virtual Memory(基于分段的虚拟内存)](#523-segment-based-virtual-memory基于分段的虚拟内存)
-        - [5.2.4. Segment and Page based Virtual Memory(基于分段和分页的虚拟内存)](#524-segment-and-page-based-virtual-memory基于分段和分页的虚拟内存)
+  - [5.1. 虚拟内存示例](#51-虚拟内存示例)
+  - [5.2. 虚拟内存问题](#52-虚拟内存问题)
+    - [5.2.1. Page based Virtual Memory(基于分页的虚拟内存)](#521-page-based-virtual-memory基于分页的虚拟内存)
+    - [5.2.2. Translation Lookaside Buffer(快表，TLB)](#522-translation-lookaside-buffer快表tlb)
+    - [5.2.3. Segment based Virtual Memory(基于分段的虚拟内存)](#523-segment-based-virtual-memory基于分段的虚拟内存)
+    - [5.2.4. Segment and Page based Virtual Memory(基于分段和分页的虚拟内存)](#524-segment-and-page-based-virtual-memory基于分段和分页的虚拟内存)
 - [6. 编程作业的一些概念](#6-编程作业的一些概念)
 
 <!-- /TOC -->
@@ -122,7 +122,7 @@ Virtual Memory
     + Store in main memory(存在主存中)
     + Virtual address(虚拟地址)
         + Virtual page number + offset in page(虚拟页的页号+页内偏移)
-    + 每一个条目(虚拟页中):位置信息(物理页号、指向硬盘指针、null表示还没有被使用)、有效位、脏位(减少对磁盘的访问)、有效位(有无被加载到物理内存中)、读写权限
+    + 每一个条目(虚拟页中):位置信息(物理页号、指向硬盘指针、null表示还没有被使用)、脏位(减少对磁盘的访问)、有效位(有无被加载到物理内存中)、读写权限
 
 ![](img/cpt12/8.png)
 
