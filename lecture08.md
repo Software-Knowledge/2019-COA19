@@ -91,7 +91,7 @@
 
 空间的局部性
 ---
-1.  Use “temporal locality”(使用局部性原理)
+1.  Use "temporal locality"(使用局部性原理)
 2. Typical cache organization(常规的cache组织)
 
 ![](img/cpt8/cpt8-4.png)

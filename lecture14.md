@@ -83,7 +83,7 @@ WInstruction Sets
 
 # 2. 指令
 1. 指令是计算机处理的最基本单位
-    + 操作码（指令执行的内容）+ 操作数（要操作的对象）
+    + 操作码（指令执行的内容)+ 操作数（要操作的对象)
 2. 多周期实现方案
     + 可以将一条指令的执行分解为一系列步骤
         + 取指令，译码/取寄存器，执行/有效地址/完成分支，访问内存，存储结果
@@ -238,8 +238,8 @@ WInstruction Sets
     3. Decimal(十进制数字)
 
 ## 5.3. Characters(字符)
-1. International reference alphabet (IRA) / American standard code for information interchange (ASCII): 7 bits(国际参考字母表（IRA）/美国信息交换标准代码（ASCII）：7位)
-2. Extended Binary Coded Decimal Interchange Code (EBCDIC): 8 bits(扩展二进制编码十进制交换码（EBCDIC）:8位)
+1. International reference alphabet (IRA) / American standard code for information interchange (ASCII): 7 bits(国际参考字母表（IRA)/美国信息交换标准代码（ASCII)：7位)
+2. Extended Binary Coded Decimal Interchange Code (EBCDIC): 8 bits(扩展二进制编码十进制交换码（EBCDIC):8位)
 3. Unicode: 16 bits / 32 bits
 
 ## 5.4. Logical data(逻辑数据)
@@ -289,7 +289,7 @@ WInstruction Sets
 ## 6.2. Notation(符号约定)
 1. A: contents of an address field in the instruction(A:指令中地址字段的内容)
 2. R: contents of an address field in the instruction that refers to a register(R:指令中引用到寄存器中的地址字段的内容)
-3. EA: actual (effective) address of the location containing the referenced operand(EA:包含引用操作数的位置的实际（有效）地址)
+3. EA: actual (effective) address of the location containing the referenced operand(EA:包含引用操作数的位置的实际（有效)地址)
 4. (X): contents of memory location X or register X(在寄存器X或者地址X中的内容)
 
 ## 6.3. Immediate Addressing(立即寻址)
@@ -400,7 +400,7 @@ require one more memory reference(需要多一个内存引用)
 ![](img/cpt14/22.png)
 
 ### 6.8.1. Relative addressing(相对寻址)
-1. Mode: the implicitly referenced register is the program counter (PC), i.e., the next instruction address is added to the address field to produce the EA(隐式引用的寄存器是程序计数器（PC），即下一个指令地址被添加到地址字段中以生成EA)
+1. Mode: the implicitly referenced register is the program counter (PC), i.e., the next instruction address is added to the address field to produce the EA(隐式引用的寄存器是程序计数器（PC)，即下一个指令地址被添加到地址字段中以生成EA)
     + 使用的是PC，根据局部性原理，A不会太大
 2. Usage: floating of public subroutine or relative transfer(公共子程序的浮动或者相对偏移)
 3. Algorithm: EA = (PC) + A
@@ -418,13 +418,13 @@ require one more memory reference(需要多一个内存引用)
 2. Algorithm: EA = A + (B)
 3. Usage: provide an efficient mechanism for performing iterative operations(提供执行迭代操作的有效机制)
 4. Extension: combine indirect addressing and indexing(间接寻址与索引结合)
-5. Pre-indexing: EA = (A + (R))（前间址）
-6. Post-indexing: EA = (A) + (R)（后间址）
+5. Pre-indexing: EA = (A + (R))（前间址)
+6. Post-indexing: EA = (A) + (R)（后间址)
 7. 参考数组:A是指开头的地址，B是下标，使用了自增寄存器
 
 ## 6.9. Stack Addressing(栈寻址)
 1. Mode: The stack pointer is maintained in a register. So references to stack locations in memory are in fact register indirect addresses.(堆栈指针保存在寄存器中。所以对内存中堆栈位置的引用实际上是寄存器间接地址。)
-2. Comment: Associated with the stack is a pointer references the top of the stack or the third element of the stack (the top two elements of the stack may be in processor registers)(注释：与堆栈相关的是一个指针，它引用堆栈的顶部或堆栈的第三个元素（堆栈的顶部两个元素可能在处理器寄存器中）)
+2. Comment: Associated with the stack is a pointer references the top of the stack or the third element of the stack (the top two elements of the stack may be in processor registers)(注释：与堆栈相关的是一个指针，它引用堆栈的顶部或堆栈的第三个元素（堆栈的顶部两个元素可能在处理器寄存器中))
 
 ![](img/cpt14/24.png)
 

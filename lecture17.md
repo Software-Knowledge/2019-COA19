@@ -200,7 +200,7 @@ Input / Output
 2. Processor goes off and does something else, and checks for interrupts at the end of each instruction cycle 处理器关闭并执行其他操作，并在每个指令周期结束时检查中断
 3. When the interrupt from I/O module occurs, processor saves the context of the current program 当I/O模块发生中断时，**处理器保存当前程序的上下文**
 4. Processor reads the word of data from I/O module and stores it in memory 处理器从I/O模块读取数据字并将其存储在存储器中
-5. Processor restores the context of the program it was working on (or some other program) and resumes execution 处理器恢复正在运行的程序（或其他程序）的上下文并继续执行
+5. Processor restores the context of the program it was working on (or some other program) and resumes execution 处理器恢复正在运行的程序（或其他程序)的上下文并继续执行
 
 ### 5.2.3. Device Identification 设备确认
 1. Multiple interrupt lines 多条中断线
@@ -314,8 +314,8 @@ Input / Output
 ![](img/cpt17/17.png)
 
 4. Example
-    1. Assume the clock frequency of CPU is 500MHz; hard disk transfers data with 4 words block (32 bits per words), and the transfer speed is 32Mbps 假设CPU的时钟频率为500MHz，硬盘以4字块（32位/字）传输数据，传输速度为32Mbps
-    2. If use interrupt driven I/O, each block transfer requires 500 clock cycles (including interrupt response and processing), what the time percentage does CPU use in hard disk I/O? 如果使用中断驱动的I/O，每个块传输需要500个时钟周期（包括中断响应和处理），CPU在硬盘I/O中使用的时间百分比是多少？
+    1. Assume the clock frequency of CPU is 500MHz; hard disk transfers data with 4 words block (32 bits per words), and the transfer speed is 32Mbps 假设CPU的时钟频率为500MHz，硬盘以4字块（32位/字)传输数据，传输速度为32Mbps
+    2. If use interrupt driven I/O, each block transfer requires 500 clock cycles (including interrupt response and processing), what the time percentage does CPU use in hard disk I/O? 如果使用中断驱动的I/O，每个块传输需要500个时钟周期（包括中断响应和处理)，CPU在硬盘I/O中使用的时间百分比是多少？
         + Interrupt number per second: 32Mb(32,000,000b) / 16B(128b) = 250K
         + Cycle number per second: 250K * 500 = 125M
         + CPU time percentage: 125M / 500M = 25%
@@ -330,10 +330,10 @@ Input / Output
 
 # 7. Evolutionary of I/O Module I/O 模块的发展进程
 1. CPU directly controls a peripheral device(最开始 CPU 直接控制了外设)
-2. A controller or I/O module is added, and CPU uses programmed I/O without interrupts (divorce CPU from external device details) 添加了控制器或I/O模块，CPU使用编程的I/O而不中断（CPU与外部设备细节分离）
-3. Interrupts are employed (CPU need not spend time waiting for an I/O operation to be performed) 使用中断（CPU无需花费时间等待执行I/O操作）
-4. I/O module is given direct access to memory via DMA (move a block of data to or from memory without involving the CPU, except at the beginning and end of the transfer) I/O模块可以通过DMA直接访问内存（在不涉及CPU的情况下将数据块移动到内存或从内存中移动数据块，传输的开始和结束时除外）
-5. **I/O channel(I/O 通道)**: I/O module has its own processor, with a specialized instruction set tailored for I/O (CPU directs I/O processor to execute an I/O program in memory, and it is interrupted only when the entire sequence has been performed) I/O模块有自己的处理器，有专门为I/O定制的指令集（CPU指示I/O处理器在内存中执行I/O程序，只有在执行了整个序列时才会中断）
+2. A controller or I/O module is added, and CPU uses programmed I/O without interrupts (divorce CPU from external device details) 添加了控制器或I/O模块，CPU使用编程的I/O而不中断（CPU与外部设备细节分离)
+3. Interrupts are employed (CPU need not spend time waiting for an I/O operation to be performed) 使用中断（CPU无需花费时间等待执行I/O操作)
+4. I/O module is given direct access to memory via DMA (move a block of data to or from memory without involving the CPU, except at the beginning and end of the transfer) I/O模块可以通过DMA直接访问内存（在不涉及CPU的情况下将数据块移动到内存或从内存中移动数据块，传输的开始和结束时除外)
+5. **I/O channel(I/O 通道)**: I/O module has its own processor, with a specialized instruction set tailored for I/O (CPU directs I/O processor to execute an I/O program in memory, and it is interrupted only when the entire sequence has been performed) I/O模块有自己的处理器，有专门为I/O定制的指令集（CPU指示I/O处理器在内存中执行I/O程序，只有在执行了整个序列时才会中断)
     + 多了processor
-6. **I/O processor(I/O 处理机)**: I/O module has a local memory (a large set of I/O devices can be controlled, with minimal CPU involvement) I/O模块有一个本地存储器（可以控制一大组I/O设备，只需占用很少的CPU）
+6. **I/O processor(I/O 处理机)**: I/O module has a local memory (a large set of I/O devices can be controlled, with minimal CPU involvement) I/O模块有一个本地存储器（可以控制一大组I/O设备，只需占用很少的CPU)
     + 多了内存

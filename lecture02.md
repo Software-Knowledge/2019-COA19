@@ -98,7 +98,7 @@ memory hierarchy(存储层次)
 
 ![](img/cpt2/cpt2-9.png)
 
-1. Execution occurs in a sequential fashion (unless explicitly modified) from one instruction to the next(从一条指令到下一条指令的执行是按顺序进行的（除非显式修改）)
+1. Execution occurs in a sequential fashion (unless explicitly modified) from one instruction to the next(从一条指令到下一条指令的执行是按顺序进行的（除非显式修改))
 2. Data and instructions are stored in a single read-write memory(数据和指令存储在单个读写存储器中)
 3. The contents of this memory are addressable by location, without regard to the type of data contained there(此内存的内容可按位置寻址，而不考虑其中包含的数据类型)
 4. 寄存器来进行储存。

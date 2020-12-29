@@ -25,8 +25,8 @@ Virtual Memory
 2. Currently, OS and multiple programs are in memory(现在，操作系统和多个程序使用内存)
     + To avoid the idle of processor when the programs wait for I/O, it requires to load more programs in memory(为了避免程序在等待I/O的时候的处理器的空闲，处理器需要加载很多的程序进入内存)
 3. Memory management(内存管理)
-    + In multiprogramming system, the “user part” of memory should be further partitioned to fit multiple programs, which is dynamically carried out by OS(在多道程序设计系统中，内存的“用户部分”需要进一步划分以适应由操作系统动态执行的多个程序)
-    + Don’t consider “process” in this slide(在本节中不要考虑“过程”)
+    + In multiprogramming system, the "user part" of memory should be further partitioned to fit multiple programs, which is dynamically carried out by OS(在多道程序设计系统中，内存的"用户部分"需要进一步划分以适应由操作系统动态执行的多个程序)
+    + Don’t consider "process" in this slide(在本节中不要考虑"过程")
 
 # 2. 加载更多程序的解决方案
 1. Enlarge memory(增大内存)
