@@ -42,7 +42,7 @@ CPU Structure and Function
 <!-- /TOC -->
 
 # 1. Task of CPU
-1. Fetch instruction: The processor reads an instruction from memory (register, cache, main memory)(获取指令：处理器从内存（寄存器、缓存、主存)读取指令)
+1. Fetch instruction: The processor reads an instruction from memory (register, cache, main memory)(获取指令：处理器从内存(寄存器、缓存、主存)读取指令)
 2. Interpret instruction: The instruction is decoded to determine what action is required(解释指令：对指令进行解码以确定所需的操作)
 3. Fetch data: The execution of an instruction may require reading data from memory or an I/O module(获取数据：指令的执行可能需要从内存或I/O模块读取数据)
 4. Process data: The execution of an instruction may require performing some arithmetic or logical operation on data(处理数据：指令的执行可能需要对数据执行一些算术或逻辑运算)
@@ -51,7 +51,7 @@ CPU Structure and Function
 # 2. CPU Requirement(CPU的需要)
 1. The processor needs to store some data temporarily(处理器需要临时存储一些数据)
 2. It must remember the location of the last instruction so that it can know where to get the next instruction(它必须记住最后一条指令的位置，以便知道下一条指令的位置)
-3. It needs to store instructions and data temporarily while an instruction is being executed(It needs to store instructions and data temporarily while an instruction is being executed)(指令执行时需要临时存储指令和数据（指令执行时需要临时存储指令和数据))
+3. It needs to store instructions and data temporarily while an instruction is being executed(It needs to store instructions and data temporarily while an instruction is being executed)(指令执行时需要临时存储指令和数据(指令执行时需要临时存储指令和数据))
 4. The processor needs a small internal memory(处理器需要一个小的内存)
 
 ![](img/cpt15/1.png)
@@ -124,7 +124,7 @@ CPU Structure and Function
 1. A register or set of registers contain status information(一个或一组寄存器包含状态信息)
 2. Sign: Sign bit of the result of the last arithmetic operation(Sign：最后一次算术运算结果的符号位)
 3. Zero: Set when the result is 0.(0：结果为0时设置。)
-4. Carry: Set if an operation resulted in a carry (addition) into or borrow (sub-traction) out of a high-order bit(进位：如果一个操作导致高阶钻头进位（增加)或出位（副牵引)，则设置)
+4. Carry: Set if an operation resulted in a carry (addition) into or borrow (sub-traction) out of a high-order bit(进位：如果一个操作导致高阶钻头进位(增加)或出位(副牵引)，则设置)
 5. Equal: Set if a logical compare result is equality(相等：设置逻辑比较结果是否相等)
 6. Overflow: Indicate arithmetic overflow(溢出：表示算术溢出)
 7. Interrupt enable/disable: Enable or disable interrupts(中断启用/禁用：启用或禁用中断)
@@ -141,7 +141,7 @@ CPU Structure and Function
     1. Certain types of control information are of specific utility to the operating system(某些类型的控制信息对操作系统具有特定的实用性)
     2. If the processor designer has a functional understanding of the operating system to be used, register organization can to some extent be tailored to the operating system(如果处理器设计者对要使用的操作系统有一个功能上的理解，那么注册组织在某种程度上可以根据操作系统进行定制)
 2. Allocation of control information between registers and memory (主存和寄存器之间的控制信息的交换)
-    1. It is common to dedicate the first (lowest) few hundred or thousand words of memory for control purposes(为了控制的目的，通常将第一个（最低的)几百或几千字的内存专用于控制目的)
+    1. It is common to dedicate the first (lowest) few hundred or thousand words of memory for control purposes(为了控制的目的，通常将第一个(最低的)几百或几千字的内存专用于控制目的)
     2. Trade-off of cost versus speed arises(成本与速度的权衡)
 
 # 4. Indirect Cycle(间址周期)
@@ -153,7 +153,7 @@ CPU Structure and Function
 ![](img/cpt15/4.png)
 
 # 5. Data Flow(数据流转)
-1. Assume a processor that employs a memory address register (MAR), a memory buffer register (MBR), a program counter (PC), and an instruction register (IR)(假设处理器使用内存地址寄存器（MAR)、内存缓冲寄存器（MBR)、程序计数器（PC)和指令寄存器（IR))
+1. Assume a processor that employs a memory address register (MAR), a memory buffer register (MBR), a program counter (PC), and an instruction register (IR)(假设处理器使用内存地址寄存器(MAR)、内存缓冲寄存器(MBR)、程序计数器(PC)和指令寄存器(IR))
 2. Fetch cycle
     + 把下一条指令地址放到MAR中去，然后交给memory
     + 控制单元设置控制线的信号，如果控制线设置为相应信号，内存会始终监听信号线，当它从上面那根短线读到读信号，则从MAR中读出一个地址，然后取出数据给数据总线。
@@ -196,12 +196,12 @@ CPU Structure and Function
 # 7. Six Stages Solution(6级流水线)
 >几级流水线表示分为了几个微操作。
 1. To gain further speedup, the pipeline must have more stages(为了进一步加速，管道必须有更多的阶段)
-    1. Fetch instruction (FI): Read the next expected instruction into a buffer(获取指令（FI)：将下一条预期指令读入缓冲区)
-    2. Decode instruction (DI):Determine opcode and operand specifiers(Decode instruction (DI):Determine opcode and operand specifiers)（解码指令（DI)：确定操作码和操作数说明符（解码指令（DI)：确定操作码和操作数说明符)
+    1. Fetch instruction (FI): Read the next expected instruction into a buffer(获取指令(FI)：将下一条预期指令读入缓冲区)
+    2. Decode instruction (DI):Determine opcode and operand specifiers(Decode instruction (DI):Determine opcode and operand specifiers)(解码指令(DI)：确定操作码和操作数说明符(解码指令(DI)：确定操作码和操作数说明符)
     3. Calculate operands (CO): Calculate effective address of each source operand(计算操作数CO：计算每个源操作数的有效地址)
-    4. Fetch operands (FO): Fetch each operand from memory. Operands in registers need not be fetched(获取操作数（FO)：从内存中获取每个操作数。不需要获取寄存器中的操作数)
-    5. Execute instruction (EI): Perform the indicated operation and store the result, if any, in the specified destination operand location(执行指令（EI)：执行指定的操作并将结果（如果有的话)存储在指定的目标操作数位置)
-    6. Write operand (WO):Store the result in memory(写入操作数（WO)：将结果存储在内存中)
+    4. Fetch operands (FO): Fetch each operand from memory. Operands in registers need not be fetched(获取操作数(FO)：从内存中获取每个操作数。不需要获取寄存器中的操作数)
+    5. Execute instruction (EI): Perform the indicated operation and store the result, if any, in the specified destination operand location(执行指令(EI)：执行指定的操作并将结果(如果有的话)存储在指定的目标操作数位置)
+    6. Write operand (WO):Store the result in memory(写入操作数(WO)：将结果存储在内存中)
 2. The various stages will be of more nearly equal duration(各个阶段的持续时间将更接近相等)
 3. Example: reduce the execution time for 9 instructions from 54 time units to 14 time units(示例：将9条指令的执行时间从54个时间单位减少到14个时间单位)
 

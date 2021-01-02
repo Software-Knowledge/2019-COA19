@@ -106,7 +106,7 @@ Control Unit Operation
 
 ## 2.6. Instruction Cycle(指令周期)
 1. There is one sequence each for the fetch, indirect, and interrupt cycles, and, for the execute cycle, there is one sequence of micro-operations for each opcode(对于获取、间接和中断周期，每个序列都有一个；对于执行周期，每个操作码都有一个微操作序列)
-2. Assume a new 2-bit register called the instruction cycle code (ICC), which designates the state of the processor in terms of which portion of the cycle it is in(假设一个新的2位**寄存器**称为指令周期码（ICC)，它根据处理器所处周期的哪一部分来指定处理器的状态)
+2. Assume a new 2-bit register called the instruction cycle code (ICC), which designates the state of the processor in terms of which portion of the cycle it is in(假设一个新的2位**寄存器**称为指令周期码(ICC)，它根据处理器所处周期的哪一部分来指定处理器的状态)
     1. 00: Fetch(取指)
     2. 01: Indirect(间址)
     3. 10: Execute(执行)
@@ -192,7 +192,7 @@ Control Unit Operation
 ## 3.4. Internal Processor Bus(内部处理器总线)
 1. A single internal bus connects the ALU and all processor registers(一条内部总线连接ALU和所有处理器寄存器)
 2. Gates and control signals are provided for movement of data onto and off the bus from each register(提供门和控制信号，用于将数据从每个寄存器移动到总线上或从总线上移动到总线上)
-3. Additional control signals control data transfer to and from the system (external) bus and the operation of the ALU(附加控制信号控制系统（外部)总线和ALU操作之间的数据传输)
+3. Additional control signals control data transfer to and from the system (external) bus and the operation of the ALU(附加控制信号控制系统(外部)总线和ALU操作之间的数据传输)
     + 为什么要把数据加载到Y中?先把数据加载到Y，然后从AC中读出数据到ALU
     + 为什么要把数据加载到Z呢？用寄存器暂存结果，必须关闭ALU和系统总线之间的门，防止ALU不断变大。
 
@@ -210,9 +210,9 @@ Control Unit Operation
     2. 控制信号为1或者0，进行处理，不能够直接拿过来使用
 
 ### 3.5.1. Control unit inputs(控制单元输入)
-1. **Key inputs**: instruction register (IR), clock, flags, and control bus signals(关键输入：指令寄存器（IR)、时钟、标志和控制总线信号)
+1. **Key inputs**: instruction register (IR), clock, flags, and control bus signals(关键输入：指令寄存器(IR)、时钟、标志和控制总线信号)
 2. In the case of the flags and control bus signals, each individual bit typically has some meaning(在标记和控制总线信号的情况下，每个单独的位通常具有一些含义)
-3. The other two inputs, IR and clock, are not directly useful to the control unit 另外两个输入（红外和时钟)对控制单元没有直接作用
+3. The other two inputs, IR and clock, are not directly useful to the control unit 另外两个输入(红外和时钟)对控制单元没有直接作用
 
 ### 3.5.2. Control unit inputs: IR 控制单元的输入:IR(instruction register)
 1. To simplify the control unit logic, there should be a unique logic input for each opcode 为了简化控制单元逻辑，每个操作码应有一个唯一的逻辑输入

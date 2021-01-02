@@ -40,7 +40,7 @@
 1. 软盘:
     + 特点:比较容易坏。
 
-2.  A disk is a circular platter constructed of nonmagnetic material (substrate) coated with a magnetizable material(磁盘是一个圆形的盘片，由涂有可磁化材料的非磁性材料（基底)构成 )
+2.  A disk is a circular platter constructed of nonmagnetic material (substrate) coated with a magnetizable material(磁盘是一个圆形的盘片，由涂有可磁化材料的非磁性材料(基底)构成 )
     + Substrate(基底): aluminum, aluminum alloy material, glass, …(铝，铝合金材料，玻璃，… )
     + Benefit of glass substrate(**玻璃基底的好处**)
         + Improvement in the uniformity of the magnetic film surface to increase disk reliability(改善磁膜表面均匀性提高磁盘可靠性)
@@ -266,7 +266,7 @@
 # 3. 磁带(Magnetic Tape)
 1. Use the same reading and recording techniques as magnetic disk(使用和磁盘相同的读写设备)
 2. The medium is flexible polyester tape coated with magnetizable material(该介质是可磁化材料涂覆的柔性聚酯带。)
-3. Parallel recording vs. serial recording (serpentine recording)(并行记录与串行记录（蛇形记录))
+3. Parallel recording vs. serial recording (serpentine recording)(并行记录与串行记录(蛇形记录))
 
 ![](img/cpt9/cpt9-14.png)
 
